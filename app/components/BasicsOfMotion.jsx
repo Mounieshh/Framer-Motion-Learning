@@ -1,13 +1,23 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import  {motion} from 'framer-motion'
 
 const BasicsOfMotion = () => {
+
+  const [isVisible, setIsVisible] = useState(true);
   return (
     <div className='grid place-content-center h-96 gap-[0.8rem]'>
 
-        <motion.div
+      <button 
+      onClick={
+        () => setIsVisible(!isVisible)
+      }
+      className='bg-violet-400 rounded p-3 hover:bg-violet-500'>
+      Show/Hide
+      </button>
+
+       { isVisible && <motion.div
         initial={{ 
           rotate:"0deg"
          }}
@@ -28,7 +38,7 @@ const BasicsOfMotion = () => {
         }}
         >
 
-        </motion.div>
+        </motion.div> }
     </div>
   )
 }

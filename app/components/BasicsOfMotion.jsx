@@ -9,10 +9,13 @@ const BasicsOfMotion = () => {
 
         <motion.div
         initial={{ 
-          rotate: "0deg"
+          rotate:"0deg"
          }}
         animate={{
-          rotate: "180deg"
+          rotate:"360deg"
+        }}
+        exit={{
+          rotate:"0deg"
         }}
         transition={{
           duration: 1,

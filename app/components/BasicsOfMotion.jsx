@@ -8,9 +8,15 @@ const BasicsOfMotion = () => {
     <div className='grid place-content-center h-96 gap-[0.8rem]'>
 
         <motion.div
-        initial={{ x: 0, y: 0 }}
+        initial={{ 
+          rotate: "0deg"
+         }}
         animate={{
           rotate: "180deg"
+        }}
+        transition={{
+          duration: 1,
+          ease: 'backOut'
         }}
         style={{
             width: '180px',

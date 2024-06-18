@@ -9,13 +9,15 @@ const BasicsOfMotion = () => {
   return (
     <div className='grid place-content-center h-96 gap-[0.8rem]'>
 
-      <button 
+      <motion.button 
       onClick={
         () => setIsVisible(!isVisible)
       }
-      className='bg-violet-400 rounded p-3 hover:bg-violet-500'>
+      className='bg-violet-400 rounded p-3 hover:bg-violet-500'
+      layout
+      >
       Show/Hide
-      </button>
+      </motion.button>
 
       <AnimatePresence mode='poplayout'>
        { isVisible && <motion.div

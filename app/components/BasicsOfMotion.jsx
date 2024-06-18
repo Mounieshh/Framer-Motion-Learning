@@ -19,13 +19,16 @@ const BasicsOfMotion = () => {
 
        { isVisible && <motion.div
         initial={{ 
-          rotate:"0deg"
+          rotate:"0deg",
+          scale: 0
          }}
         animate={{
-          rotate:"360deg"
+          rotate:"360deg",
+          scale: 1
         }}
         exit={{
-          rotate:"0deg"
+          rotate:"0deg",
+          scale: 0
         }}
         transition={{
           duration: 1,

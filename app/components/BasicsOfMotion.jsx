@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import  {motion} from 'framer-motion'
+import  {AnimatePresence, motion} from 'framer-motion'
 
 const BasicsOfMotion = () => {
 
@@ -17,6 +17,7 @@ const BasicsOfMotion = () => {
       Show/Hide
       </button>
 
+      <AnimatePresence mode='poplayout'>
        { isVisible && <motion.div
         initial={{ 
           rotate:"0deg",
@@ -42,6 +43,7 @@ const BasicsOfMotion = () => {
         >
 
         </motion.div> }
+        </AnimatePresence>
     </div>
   )
 }

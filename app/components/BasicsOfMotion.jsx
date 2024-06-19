@@ -19,7 +19,7 @@ const BasicsOfMotion = () => {
       Show/Hide
       </motion.button>
 
-      <AnimatePresence mode='poplayout'>
+      <AnimatePresence mode='wait'>
        { isVisible && <motion.div
         initial={{ 
           rotate:"0deg",
@@ -29,7 +29,7 @@ const BasicsOfMotion = () => {
         animate={{
           rotate:"360deg",
           scale: 1,
-          y:[0, 150, -150, -150, 0]
+          
         }}
         exit={{
           rotate:"0deg",

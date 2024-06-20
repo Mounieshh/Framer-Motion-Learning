@@ -19,7 +19,7 @@ const BasicsOfMotion = () => {
       Show/Hide
       </motion.button>
 
-      <AnimatePresence mode='wait'>
+      <AnimatePresence mode='popLayout'>
        { isVisible && <motion.div
         initial={{ 
           rotate:"0deg",

@@ -26,13 +26,13 @@ const BasicsOfMotion = () => {
               y: 0
             }}
             animate={{
-              rotate: "360deg",
+              rotate: "180deg",
               scale: 1,
             }}
             exit={{
               rotate: "0deg",
               scale: 0,
-              y: [0, 150, -150, 150, 0]
+              x: [0, 150, -150, 150, 0]
             }}
             transition={{
               duration: 1,

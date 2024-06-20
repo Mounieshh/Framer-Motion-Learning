@@ -36,7 +36,7 @@ const BasicsOfMotion = () => {
             }}
             transition={{
               duration: 1,
-              ease: 'backOut',
+              ease: 'backInOut',
               times: [0, 0.25, 0.5, 0.85, 1]
             }}
             style={{

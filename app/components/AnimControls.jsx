@@ -1,6 +1,7 @@
-
+'use client'
 
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const AnimControls = () => {
   return (
@@ -13,13 +14,25 @@ const AnimControls = () => {
         gap: '0.8 rem'
     }}
     >
-        <button className='p-3 bg-violet-400 m-3 rounded hover:bg-violet-500'>
+        <motion.button className='p-3 bg-violet-400 m-3 rounded hover:bg-violet-500'>
             Flip it
-        </button>
+        </motion.button>
 
-        <div className='h-32 w-32 bg-black '>
+        <motion.div 
+        
+        className='h-32 w-32 bg-black '
+        variants={{
+          initial: {
+            rotate: 0,
+          },
+          flip : {
+            rotate: 360,
+          }
+        }}
+        whileHover='flip'
+        >
 
-        </div>
+        </motion.div>
     </div>
     </>
   )

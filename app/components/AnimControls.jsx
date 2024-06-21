@@ -7,7 +7,7 @@ const AnimControls = () => {
 
   const controls = useAnimationControls()
   const handleClick = () => {
-    // Add your animation controls here
+    controls.start('flip')
   }
   return (
     <>
@@ -36,7 +36,7 @@ const AnimControls = () => {
             rotate: 360,
           }
         }}
-        whileHover='flip'
+        animate={controls}
         initial= 'initial'
         >
 

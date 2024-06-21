@@ -12,6 +12,9 @@ const Gestures = () => {
     }}
     >
 
+        <button className='bg-violet-400 rounded p-3 hover:bg-violet-500'>
+            Click Here
+        </button>
     </div>
     </>
   )

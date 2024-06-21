@@ -1,9 +1,14 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, useAnimationControls } from 'framer-motion'
 
 const AnimControls = () => {
+
+  const controls = useAnimationControls()
+  const handleClick = () => {
+    // Add your animation controls here
+  }
   return (
     <>
     <div 
@@ -14,7 +19,9 @@ const AnimControls = () => {
         gap: '0.8 rem'
     }}
     >
-        <motion.button className='p-3 bg-violet-400 m-3 rounded hover:bg-violet-500'>
+        <motion.button 
+        onClick={handleClick}
+        className='p-3 bg-violet-400 m-3 rounded hover:bg-violet-500'>
             Flip it
         </motion.button>
 
@@ -30,6 +37,7 @@ const AnimControls = () => {
           }
         }}
         whileHover='flip'
+        initial= 'initial'
         >
 
         </motion.div>

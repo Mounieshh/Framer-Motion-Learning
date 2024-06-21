@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, MotionConfig } from 'framer-motion'
 
 const Gestures = () => {
   return (
@@ -14,19 +14,30 @@ const Gestures = () => {
         gap: '0.8 rem'
     }}
     >
+        <MotionConfig
+         transition={{
+            duration: 0.07,
+            ease: 'easeInOut'
+        }}
+        >
+        <motion.button 
+        whileHover={{
+            scale: 1.2
+        }}
+        whileTap={{scale: 1, rotate: '3deg'}}
+        className='bg-red-500 rounded p-3 m-3 hover:bg-red-400'>
+            Click Here
+        </motion.button>
 
         <motion.button 
         whileHover={{
             scale: 1.2
         }}
         whileTap={{scale: 1, rotate: '3deg'}}
-        transition={{
-            duration: 0.07,
-            ease: 'easeInOut'
-        }}
-        className='bg-violet-400 rounded p-3 hover:bg-violet-500'>
+        className='bg-violet-400 rounded p-3 m-3 hover:bg-violet-500'>
             Click Here
         </motion.button>
+        </MotionConfig>
     </div>
     </>
   )

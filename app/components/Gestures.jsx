@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Gestures = () => {
   return (
@@ -12,9 +15,14 @@ const Gestures = () => {
     }}
     >
 
-        <button className='bg-violet-400 rounded p-3 hover:bg-violet-500'>
+        <motion.button 
+        whileHover={{
+            scale: 1.2
+        }}
+        whileTap={{scale: 1, rotate: '3deg'}}
+        className='bg-violet-400 rounded p-3 hover:bg-violet-500'>
             Click Here
-        </button>
+        </motion.button>
     </div>
     </>
   )

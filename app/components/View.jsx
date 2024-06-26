@@ -14,6 +14,7 @@ const View = () => {
         console.log("Is In View -> ",isInView);
 
      },[isInView])
+     
   return (
     <>
     <div style={{height: '150vh'}}/>

@@ -7,17 +7,18 @@ import AnimControls from './components/AnimControls'
 import View from './components/View'
 import AnimScroll from './components/AnimScroll'
 
-import { motion, useScroll } from 'framer-motion'
+import { motion, useScroll, useSpring } from 'framer-motion'
 
 const page = () => {
 
-  const {scrollYProgress} = useScroll()
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress)
   return (
     <>
 
     <motion.div
       style={{
-      scaleX: scrollYProgress,
+      scaleX,
       background: 'red',
       transformOrigin: 'left',
       position: 'sticky',

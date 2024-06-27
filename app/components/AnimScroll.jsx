@@ -1,18 +1,21 @@
 'use client'
 
 import React from 'react'
-import { motion, useScroll } from 'framer-motion'
+import { motion, useScroll, useSpring } from 'framer-motion'
 
 const AnimScroll = () => {
 
   const { scrollYProgress } = useScroll()
+
+  const scaleX = useSpring(scrollYProgress)
   return (
     <>
     <div className='mt-64'>
 
       <motion.div
       style={{
-      scaleX: scrollYProgress,
+      // scaleX: scrollYProgress,
+      scaleX,
       background: 'red',
       transformOrigin: 'left',
       position: 'sticky',

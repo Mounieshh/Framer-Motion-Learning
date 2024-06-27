@@ -1,11 +1,28 @@
+'use client'
+
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const AnimScroll = () => {
   return (
     <>
-    <div>
+    <div className='mt-64'>
+
+      <motion.div
+      
+     style={{
+      background: 'red',
+      transformOrigin: 'left',
+      position: 'sticky',
+      top: '0',
+      width: '100%',
+      height: '20px'
+     }}
+      />
+
+
         <div 
-        className='max-w-3xl m-auto p-5'>
+        className='max-w-3xl m-auto p-5 mt-24'>
             <p>
                 Lorem ipsum dolor sit amet 
                 consectetur adipisicing elit. Itaque nobis rerum praesentium placeat. Quia, quos omnis libero, saepe error numquam voluptates non 
